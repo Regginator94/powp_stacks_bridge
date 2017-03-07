@@ -41,4 +41,8 @@ public class Stack {
 		return total;
 	}
 
+	public void setTotal(int total) {
+		this.total = total;
+	}
+
 }
