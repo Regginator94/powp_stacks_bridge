@@ -2,7 +2,7 @@ package edu.kis.vh.stacks.list;
 
 public class StackList {
 
-	private static final int EMPTY_STACK_VALUE = -1;
+	private static final int EMPTY_STACK_VALUE = -1; //modyfikator final został ustawiony przy tworzeniu deklaracji stałych
 	private Node last;
 	int i;
 

@@ -2,13 +2,13 @@ package edu.kis.vh.stacks;
 
 public class Stack {
 	
-	private static final int EMPTY_STACK_VALUE = -1;
+	private static final int EMPTY_STACK_VALUE = -1;  //modyfikator final został ustawiony przy tworzeniu deklaracji stałych
 	
-	private static final int STACK_SIZE_VALUE = 12;
+	private static final int STACK_SIZE_VALUE = 12;  //modyfikator final został ustawiony przy tworzeniu deklaracji stałych
 	
-	private static final int STACK_FULL_VALUE = 11;
+	private static final int STACK_FULL_VALUE = 11; //modyfikator final został ustawiony przy tworzeniu deklaracji stałych
 	
-	private int[] items = new int[STACK_SIZE_VALUE];
+	private int[] items = new int[STACK_SIZE_VALUE]; //modyfikator final został ustawiony przy tworzeniu deklaracji stałych
 	
 	private int total = EMPTY_STACK_VALUE;
 
