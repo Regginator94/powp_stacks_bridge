@@ -33,26 +33,26 @@ public class Stack {
 
 	public void push(int i) {
 		stackArray.push(i);
-	}
+	}   
 
 	public boolean isEmpty() {
-		return stackArray.isEmpty();
+		return stackArray.isEmpty(); 	//Opcja Navigate → Open Declaration (F3) - otwiera implementację wywoływanej metody
 	}
 
 	public boolean isFull() {
-		return stackArray.isFull();
+		return stackArray.isFull(); 	//Opcja Navigate → Open Declaration (F3) - otwiera implementację wywoływanej metody
 	}
 
 	public int top() {
-		return stackArray.top();
-	}
+		return stackArray.top();	//Opcja Navigate → Open Declaration (F3) - otwiera implementację wywoływanej metody
+	} 
 
 	public int pop() {
-		return stackArray.pop();
+		return stackArray.pop();	//Opcja Navigate → Open Declaration (F3) - otwiera implementację wywoływanej metody
 	}
 
 	public int getTotal() {
-		return stackArray.getTotal();
+		return stackArray.getTotal();	//Opcja Navigate → Open Declaration (F3) - otwiera implementację wywoływanej metody
 	}
 
 
