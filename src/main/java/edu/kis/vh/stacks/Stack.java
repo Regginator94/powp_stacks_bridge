@@ -1,5 +1,6 @@
 package edu.kis.vh.stacks;
 
+import edu.kis.vh.stacks.list.IStack;
 import edu.kis.vh.stacks.list.StackList;
 
 /**
@@ -18,38 +19,39 @@ public class Stack {
 	
 	private int total = EMPTY_STACK_VALUE;
 	
-	private StackList stackList = new StackList();
+	private IStack istack = new StackList();
 	
 	public Stack() {
 		
 	}
 	
-	public Stack(int[] items, int total, StackList stackList) {
+	public Stack(int[] items, int total, IStack istack) {
 		super();
 		this.items = items;
 		this.total = total;
-		this.stackList = stackList;
+		this.istack = istack;
 	}
 
 	public void push(int i) {
-		stackList.pushElement(i);
+		istack.push(i);
 	}
 
 	public boolean isEmpty() {
-		return stackList.empty();
+		return istack.isEmpty();
 	}
 
 	public boolean isFull() {
-		return stackList.full();
+		return istack.isFull();
 	}
 
 	public int top() {
-		return stackList.peek();
+		return istack.top();
 	}
 
 	public int pop() {
-		return stackList.pop();
+		return istack.pop();
 	}
+
 
 	
 }
