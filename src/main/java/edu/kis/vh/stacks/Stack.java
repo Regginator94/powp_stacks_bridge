@@ -1,6 +1,6 @@
 package edu.kis.vh.stacks;
 
-import edu.kis.vh.stacks.list.StackArray;
+import edu.kis.vh.stacks.list.StackList;
 
 /**
  * @author KUBA
@@ -18,44 +18,38 @@ public class Stack {
 	
 	private int total = EMPTY_STACK_VALUE;
 	
-	private StackArray stackArray = new StackArray();
+	private StackList stackList = new StackList();
 	
 	public Stack() {
 		
 	}
 	
-	public Stack(int[] items, int total, StackArray stackArray) {
+	public Stack(int[] items, int total, StackList stackList) {
 		super();
 		this.items = items;
 		this.total = total;
-		this.stackArray = stackArray;
+		this.stackList = stackList;
 	}
 
 	public void push(int i) {
-		stackArray.push(i);
-	}   
+		stackList.pushElement(i);
+	}
 
 	public boolean isEmpty() {
-		return stackArray.isEmpty(); 	//Opcja Navigate → Open Declaration (F3) - otwiera implementację wywoływanej metody
+		return stackList.empty();
 	}
 
 	public boolean isFull() {
-		return stackArray.isFull(); 	//Opcja Navigate → Open Declaration (F3) - otwiera implementację wywoływanej metody
+		return stackList.full();
 	}
 
 	public int top() {
-		return stackArray.top();	//Opcja Navigate → Open Declaration (F3) - otwiera implementację wywoływanej metody
-	} 
+		return stackList.peek();
+	}
 
 	public int pop() {
-		return stackArray.pop();	//Opcja Navigate → Open Declaration (F3) - otwiera implementację wywoływanej metody
+		return stackList.pop();
 	}
-
-	public int getTotal() {
-		return stackArray.getTotal();	//Opcja Navigate → Open Declaration (F3) - otwiera implementację wywoływanej metody
-	}
-
-
 
 	
 }
