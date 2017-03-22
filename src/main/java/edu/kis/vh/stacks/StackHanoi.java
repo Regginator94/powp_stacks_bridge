@@ -1,11 +1,21 @@
 package edu.kis.vh.stacks;
 
+import edu.kis.vh.stacks.structures.IStack;
+
 public class StackHanoi extends Stack {
 
 	private int totalRejected = 0;
 
 	public int reportRejected() {
 		return totalRejected;
+	}
+
+	public StackHanoi() {
+		super();
+	}
+
+	public StackHanoi(int[] items, int total, IStack istack) {
+		super(items, total, istack);
 	}
 
 	@Override
