@@ -8,7 +8,10 @@ import edu.kis.vh.stacks.structures.StackList;
  * @version 2.0
  */
 public class Stack {
-	
+	//3.1.13
+	//po wciśnięciu f3 przechodzimy do deklaracji metod w interfejsie
+	//ctrl + t wyśiwetla interfejs i klasy implementujące interfejs 
+	// ctrl + kursor umożliwia Otwarcie Deklaracji lub Implmentacji
 	private static final int EMPTY_STACK_VALUE = -1;  
 	
 	private static final int STACK_SIZE_VALUE = 12;  
