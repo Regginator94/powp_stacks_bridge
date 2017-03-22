@@ -22,10 +22,14 @@ public class Stack {
 	
 	private int total = EMPTY_STACK_VALUE;
 	
-	private IStack istack = new StackList();  // dzieki generalizacji na rzecz IStack możemy utowrzyć obiekt typu StackList lub StackArray gdyż 
+	private IStack istack;  // dzieki generalizacji na rzecz IStack możemy utowrzyć obiekt typu StackList lub StackArray gdyż 
 												//obie klasy implementują interfejs IStack co gwarantuje nam posiadanie wymaganych metod/atrybutów	
 	public Stack() {
 		
+	}
+	
+	public Stack(IStack iStack) {
+		this.istack = iStack;
 	}
 	
 	public Stack(int[] items, int total, IStack istack) {
