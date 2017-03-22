@@ -1,7 +1,7 @@
 package edu.kis.vh.stacks;
 
-import edu.kis.vh.stacks.list.IStack;
-import edu.kis.vh.stacks.list.StackList;
+import edu.kis.vh.stacks.structures.IStack;
+import edu.kis.vh.stacks.structures.StackList;
 
 /**
  * @author KUBA
