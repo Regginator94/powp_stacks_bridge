@@ -2,7 +2,6 @@ package edu.kis.vh.stacks.structures;
 
 public class StackArray implements IStack {
 	
-	private static final int EMPTY_STACK_VALUE = -1; 
 	private static final int STACK_SIZE_VALUE = 12;  
 	private static final int STACK_FULL_VALUE = 11;
 	private int[] items = new int[STACK_SIZE_VALUE]; 

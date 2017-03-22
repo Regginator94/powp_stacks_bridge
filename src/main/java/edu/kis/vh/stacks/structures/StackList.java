@@ -2,7 +2,6 @@ package edu.kis.vh.stacks.structures;
 
 public class StackList implements IStack {
 
-	private static final int EMPTY_STACK_VALUE = -1; //modyfikator final został ustawiony przy tworzeniu deklaracji stałych
 	private Node last;
 	int i;
 
