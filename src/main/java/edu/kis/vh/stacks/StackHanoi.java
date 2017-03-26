@@ -12,6 +12,10 @@ public class StackHanoi extends Stack {
 
 	public StackHanoi() {
 		super();
+	}	
+
+	public StackHanoi(IStack iStack) {
+		super(iStack);
 	}
 
 	public StackHanoi(int[] items, int total, IStack istack) {

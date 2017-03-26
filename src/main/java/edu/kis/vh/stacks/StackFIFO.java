@@ -11,6 +11,10 @@ public class StackFIFO extends Stack {
 		super();
 	}
 
+	public StackFIFO(IStack iStack) {
+		super(iStack);
+	}
+
 	public StackFIFO(int[] items, int total, IStack istack) {
 		super(items, total, istack);
 	}
