@@ -6,6 +6,8 @@ import org.junit.Test;
 import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.StackFIFO;
 import edu.kis.vh.stacks.StackHanoi;
+import edu.kis.vh.stacks.factory.ArrayStackFactory;
+import edu.kis.vh.stacks.factory.ListStackFactory;
 
 public class StackTest {
 
@@ -18,6 +20,28 @@ public class StackTest {
 		int result = stackObj.top();
 		Assert.assertEquals(testValue, result);
 	}
+	
+	@Test
+	public void testStackArrayPush() {
+		ArrayStackFactory arrayStacksFactory = new ArrayStackFactory();
+		Stack stackObj = arrayStacksFactory.getStandardStack();
+ 		int testValue = 4;
+ 		stackObj.push(testValue);
+ 		
+ 		int result = stackObj.top();
+		Assert.assertEquals(testValue, result);
+	} 		
+	
+	@Test
+	public void testStackListPush() {
+		ListStackFactory listStacksFactory = new ListStackFactory();
+		Stack stackObj = listStacksFactory.getStandardStack();
+ 		int testValue = 4;
+ 		stackObj.push(testValue);
+ 		
+ 		int result = stackObj.top();
+		Assert.assertEquals(testValue, result);
+	} 	
 
 	@Test
 	public void testIsEmpty() {
@@ -30,6 +54,32 @@ public class StackTest {
 		result = stackObj.isEmpty();
 		Assert.assertEquals(false, result);
 	}
+	
+	@Test
+	public void testArrayIsEmpty() {
+		ArrayStackFactory arrayStacksFactory = new ArrayStackFactory();
+		Stack stackObj = arrayStacksFactory.getStandardStack();
+		boolean result = stackObj.isEmpty();
+		Assert.assertEquals(true, result);
+ 		int testValue = 4;
+ 		stackObj.push(testValue);
+
+		result = stackObj.isEmpty();
+		Assert.assertEquals(false, result);
+	}
+	
+	@Test
+	public void testListIsEmpty() {
+		ListStackFactory listStacksFactory = new ListStackFactory();
+		Stack stackObj = listStacksFactory.getStandardStack();
+		boolean result = stackObj.isEmpty();
+		Assert.assertEquals(true, result);
+ 		int testValue = 4;
+ 		stackObj.push(testValue);
+
+		result = stackObj.isEmpty();
+		Assert.assertEquals(false, result);
+	} 
 
 	@Test
 	public void testIsFull() {
@@ -62,10 +112,64 @@ public class StackTest {
 		result = stackObj.top();
 		Assert.assertEquals(testValue, result);
 	}
+	
+	@Test
+	public void testListTop() {
+		ListStackFactory listStacksFactory = new ListStackFactory();
+		Stack stackObj = listStacksFactory.getStandardStack();
+		final int EMPTY_STACK_VALUE = -1;
+
+		int result = stackObj.top();
+		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+
+		int testValue = 4;
+		stackObj.push(testValue);
+
+		result = stackObj.top();
+		Assert.assertEquals(testValue, result);
+		result = stackObj.top();
+		Assert.assertEquals(testValue, result);
+	}
 
 	@Test
 	public void testPop() {
 		Stack stackObj = new Stack();
+		final int EMPTY_STACK_VALUE = -1;
+
+		int result = stackObj.pop();
+		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+
+		int testValue = 4;
+		stackObj.push(testValue);
+
+		result = stackObj.pop();
+		Assert.assertEquals(testValue, result);
+		result = stackObj.pop();
+		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+	}
+	
+	@Test
+	public void testListPop() {
+		ListStackFactory listStacksFactory = new ListStackFactory();
+		Stack stackObj = listStacksFactory.getStandardStack();
+		final int EMPTY_STACK_VALUE = -1;
+
+		int result = stackObj.pop();
+		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+
+		int testValue = 4;
+		stackObj.push(testValue);
+
+		result = stackObj.pop();
+		Assert.assertEquals(testValue, result);
+		result = stackObj.pop();
+		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+	}
+	
+	@Test
+	public void testArrayPop() {
+		ArrayStackFactory arrayStacksFactory = new ArrayStackFactory();
+		Stack stackObj = arrayStacksFactory.getStandardStack();
 		final int EMPTY_STACK_VALUE = -1;
 
 		int result = stackObj.pop();
