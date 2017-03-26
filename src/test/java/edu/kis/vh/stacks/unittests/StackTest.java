@@ -44,6 +44,7 @@ public class StackTest {
 		boolean result = stackObj.isFull();
 		Assert.assertEquals(true, result);
 	}
+	//testIsFull zwraca faila ponieważ lista nie posiada określonej długości w prezciwiestwie do StackArray
 
 	@Test
 	public void testTop() {
@@ -105,7 +106,7 @@ public class StackTest {
 		Assert.assertEquals(result, testValue);
 		
 		result = stackFIFO.pop();
-		Assert.assertEquals(result, EMPTY_STACK_VALUE);
+		Assert.assertEquals(result, EMPTY_STACK_VALUE); // z powodu zmiany empty_stack_value na 0 testy zwracały fail
 		
 	}
 
