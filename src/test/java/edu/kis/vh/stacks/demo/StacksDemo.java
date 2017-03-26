@@ -18,7 +18,7 @@ class StacksDemo {
 		testStacks(factory);
 		testStacks(listStackFactory);
 		testStacks(arrayStacksFactory);
-
+		// zasade izolacji łamia klasy fabryk w zależności od implementacji zwracają one StackList lub StackArray	
 	}
 
 	private static void testStacks(IStacksFactory factory) {
